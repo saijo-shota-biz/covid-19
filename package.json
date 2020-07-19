@@ -10,6 +10,8 @@
     "@types/node": "^12.12.50",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -19,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix src/**/*.{ts,tsx,json} && stylelint --fix src/**/*.scss"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +37,33 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "install": "^0.13.0",
+    "node-sass": "^4.14.1",
+    "prettier": "2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,json,scss}": [
+      "npm run lint",
+      "git add"
     ]
   }
 }
