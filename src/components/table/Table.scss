@@ -1,0 +1,33 @@
+.table {
+  margin: 10px;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  & th, td {
+    padding: 10px;
+    width: 100px;
+    border-right: solid 1px black;
+  }
+
+  & th {
+    cursor: pointer;
+    background-color: #00BCD4;
+    color: white;
+
+    &.no-clickable {
+      cursor: unset;
+    }
+
+    &.sorted.asc::after {
+      content: "↓";
+    }
+
+    &.sorted.desc::after {
+      content: "↑";
+    }
+  }
+
+  & td {
+    border-top: solid 1px black;
+  }
+}
