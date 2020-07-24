@@ -34,7 +34,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://saijo_shota_biz.github.io/covid-19/",
+  "homepage": "https://saijo-shota-biz.github.io/covid-19/",
   "eslintConfig": {
     "extends": "react-app"
   },
