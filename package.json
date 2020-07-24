@@ -30,8 +30,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix src/**/*.{ts,tsx,json} && stylelint --fix src/**/*.scss"
+    "lint": "eslint --fix src/**/*.{ts,tsx,json} && stylelint --fix src/**/*.scss",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://saijo_shota_biz.github.io/covid-19/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -53,6 +56,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
+    "gh-pages": "^3.1.0",
     "install": "^0.13.0",
     "node-sass": "^4.14.1",
     "prettier": "2.0.5",
